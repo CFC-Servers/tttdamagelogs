@@ -32,12 +32,10 @@ DamageLog.MyNewProperty = config.MyNewProperty
 	Third argument: access to RDM Manager tab in Damagelogs (true/false).
 ]]
 --
-Damagelog:AddUser("superadmin", 4, true)
-Damagelog:AddUser("owner", 4, true)
-Damagelog:AddUser("founder", 4, true)
-Damagelog:AddUser("admin", 4, true)
-Damagelog:AddUser("operator", 3, false)
-Damagelog:AddUser("user", 2, false)
+Damagelog:AddUser( "superadmin", 4, true )
+Damagelog:AddUser( "admin", 4, true )
+Damagelog:AddUser( "moderator", 4, true )
+Damagelog:AddUser( "cadet", 3, true )
 
 
 -- The F-key
@@ -91,12 +89,12 @@ Damagelog.Autoslay_DefaultReason11 = "Trolling"
 Damagelog.Autoslay_DefaultReason12 = "Minge"
 
 -- Default ban reasons (ULX and ServerGuard)
-Damagelog.Ban_DefaultReason1 = "Random Damage and leave"
-Damagelog.Ban_DefaultReason2 = "RDM and leave"
+-- Damagelog.Ban_DefaultReason1 = "Random Damage and leave"
+-- Damagelog.Ban_DefaultReason2 = "RDM and leave"
 Damagelog.Ban_DefaultReason3 = "2x RDM and leave"
 Damagelog.Ban_DefaultReason4 = "Attempted Mass and leave"
 Damagelog.Ban_DefaultReason5 = "Mass RDM"
-Damagelog.Ban_DefaultReason6 = "Super Mass"
+-- Damagelog.Ban_DefaultReason6 = "Super Mass"
 Damagelog.Ban_DefaultReason7 = "Ghosting"
 Damagelog.Ban_DefaultReason8 = "Hacking"
 Damagelog.Ban_DefaultReason9 = "Consistent RDM"
