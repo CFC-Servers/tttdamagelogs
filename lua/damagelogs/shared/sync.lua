@@ -14,7 +14,6 @@ local ENT = {
     Draw = function() end,
     Initialize = function(self)
         self:DrawShadow(false)
-        self:AddEFlags(EFL_KEEP_ON_RECREATE_ENTITIES)
     end
 }
 
@@ -52,4 +51,13 @@ if SERVER then
             end
         end
     end)
+end
+
+game_CleanUpMap = game_CleanUpMap or game.CleanUpMap
+function game.CleanUpMap( sendToClients, filters )
+    if not filters then filters = {} end
+
+    table.insert( filters, "dmglog_sync_ent" )
+
+    return game_CleanUpMap( sendToClients, filters )
 end
